@@ -79,6 +79,15 @@
         .organizer {
             text-align: center;
         }
+        .custom-link a {
+            color: black; /* Set the link color to black */
+            text-decoration: none; /* Remove the underline */
+        }
+
+        .custom-link a:hover {
+            text-decoration: underline; /* Optional: Add underline on hover for better UX */
+        }
+
 
 
 
@@ -166,25 +175,25 @@
             <td>11/03/2023</td>
             <td>Elizabeth Ondula</td>
             <td>Introduction to Reinforcement Learning</td>
-            <td><a href="http://incompleteideas.net/book/the-book-2nd.html">RL Book</a></td>
+            <td class="custom-link"><a href="http://incompleteideas.net/book/the-book-2nd.html">RL Book</a></td>
         </tr>
         <tr>
             <td>11/10/2023</td>
             <td>Narjes Nourzad</td>
             <td>Multi-Armed Bandits</td>
-            <td><a href="#">Book</a></td>
+            <td class="custom-link"><a href="#">Book</a></td>
         </tr>
         <tr>
             <td>11/17/2023</td>
             <td>TBD</td>
             <td>MDPs and POMPDs</td>
-            <td><a href="#">TBD</a></td>
+            <td class="custom-link"><a href="#">TBD</a></td>
         </tr>
         <tr>
             <td>12/08/2023</td>
             <td>TBD</td>
             <td>TBD</td>
-            <td><a href="#">TBD</a></td>
+            <td class="custom-link"><a href="#">TBD</a></td>
         </tr>
         </tbody>
     </table>
@@ -200,16 +209,16 @@
     <div class="organizers-grid">
         <div class="organizer">
             <img src="images/elizabeth-wisc.jpg" alt="Organizer 1" class="circle-image">
-            <div><a href="https://eondula.github.io/">Elizabeth Ondula</a></div>
+            <div class="custom-link"><a href="https://eondula.github.io/">Elizabeth Ondula</a></div>
 
         </div>
         <div class="organizer">
             <img src="images/narjes.jpg" alt="Organizer 2" class="circle-image">
-            <div><a href="https://narjesnourzad.wixsite.com/webpage">Narjes Nourzad</a></div>
+            <div class="custom-link"><a href="https://narjesnourzad.wixsite.com/webpage">Narjes Nourzad</a></div>
         </div>
         <div class="organizer">
             <img src="images/sophie.jpeg" alt="Organizer 3" class="circle-image">
-            <div><a href="https://www.linkedin.com/in/sophie-ya-chuan-hsu/">Ya-Chuan (Sophie)</a></div>
+            <div class="custom-link"><a href="https://www.linkedin.com/in/sophie-ya-chuan-hsu/">Ya-Chuan (Sophie)</a></div>
         </div>
     </div>
 </div>
