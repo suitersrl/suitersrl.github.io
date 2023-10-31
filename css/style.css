@@ -1,0 +1,13 @@
+/* Custom styles */
+.navbar {
+    background-color: white;
+}
+
+.navbar .navbar-brand,
+.navbar .navbar-nav .nav-link {
+    color: black !important;
+}
+
+.navbar-toggler-icon {
+    filter: invert(1); /* inverting the color to make it visible against black background */
+}
