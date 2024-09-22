@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practicals Playground</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+            background-color: black;
+            color: white;
+            padding: 20px;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .tabs li {
+            margin: 0 15px;
+            cursor: pointer;
+            padding: 10px;
+            background-color: #333;
+            border-radius: 5px;
+        }
+
+        .tabs li.active {
+            background-color: #555;
+        }
+
+        .tab-content {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        img {
+            max-width: 50%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Practicals Playground</h2>
+
+    <!-- Tabs menu -->
+    <ul class="tabs">
+        <li class="active" onclick="showTabContent('tab1')">Register</li>
+        <li onclick="showTabContent('tab2')">Schedule</li>
+        <li onclick="showTabContent('tab3')">About</li>
+    </ul>
+
+    <!-- Tab content -->
+    <div id="tab1" class="tab-content active">
+        <p><a href="https://forms.gle/Af3yenibLzGncadJ9" style="color: white; text-decoration: underline;">Register here.</a></p>
+        <div style="display: inline-block;">
+            <img src="images/Practical%20Playgrounds.png" alt="Description of the image">
+        </div>
+        <p>Event by SUITERS-RL</p>
+    </div>
+
+    <div id="tab2" class="tab-content">
+        <p><a href="https://docs.google.com/document/d/12axlueW1DbM1fjU2MGGJcOpyXJep-a908F3I8-VPXng/edit?usp=sharing"
+              style="color: white; text-decoration: underline;">See Schedule.</a></p>
+
+        <div style="display: inline-block;">
+            <img src="images/schedule.png" alt="RL Algorithm">
+        </div>
+        <p>Event by SUITERS-RL</p>
+    </div>
+
+    <div id="tab3" class="tab-content">
+
+        <div style="display: inline-block;">
+            <img src="images/About.png" alt="RL Applications">
+        </div>
+        <p>Event by SUITERS-RL</p>
+    </div>
+</div>
+
+<script>
+    function showTabContent(tabId) {
+        // Remove active class from all tabs
+        const tabs = document.querySelectorAll('.tabs li');
+        tabs.forEach(tab => {
+            tab.classList.remove('active');
+        });
+
+        // Hide all tab contents
+        const contents = document.querySelectorAll('.tab-content');
+        contents.forEach(content => {
+            content.classList.remove('active');
+        });
+
+        // Show the selected tab content and set the active tab
+        document.getElementById(tabId).classList.add('active');
+        document.querySelector(`[onclick="showTabContent('${tabId}')"]`).classList.add('active');
+    }
+</script>
+</body>
+</html>
